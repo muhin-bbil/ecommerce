@@ -3,7 +3,7 @@ session_start ();
 
 include('../config/DbFunction.php');
 $obj=new DbFunction();
-$rs=$obj->fetchCategoryTreeList();
+$rs=$obj->showNestedCategories();
 
 ?>
 
@@ -72,7 +72,7 @@ $rs=$obj->fetchCategoryTreeList();
                                     <ul>
 
                                     <?php
-                                    echo "<pre>"; print_r($rs); echo "</pre>";
+                                    echo $rs;
                                     ?>
                                     </ul>
                             </div>
